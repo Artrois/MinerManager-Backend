@@ -1,0 +1,31 @@
+{ "minerips": [
+    {
+        "HostName": "192.168.3.3", 
+        "port": 4028, 
+        "isAlive": false,
+        "timestamp": "NaN",
+        "dirty": true,
+        "summary": null,
+        "pools": null,
+        "edevs": null,
+        "psu": null,
+        "error_codes": null
+    }, 
+    {
+        "HostName": "127.0.0.1", 
+        "port": 4028, 
+        "isAlive": false,
+        "timestamp": "NaN",
+        "dirty": true,
+        "summary": null,
+        "pools": null,
+        "edevs": null,
+        "psu": null,
+        "error_codes": null
+    }
+            ],
+    "backend_server_port": 8000,
+    "fake_miner_port": 4028,
+    "miner_request_interval_msecs": 5000,
+    "debug_level": 1
+}

@@ -1,0 +1,17 @@
+{
+"STATUS":"S",
+"When":1643182793,
+"Code":131,
+"Msg":{
+"name":"P221B",
+"hw_version":"V01.00",
+"sw_version":"V01.00.V01.03",
+"model":"P221B",
+"iin":"8718",
+"vin":"22400",
+"fan_speed":"6976",
+"version":"-1",
+"serial_no":"A1232B0120100049",
+"vender":"7" },
+"Description":"" 
+}
