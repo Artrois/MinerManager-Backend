@@ -31,7 +31,7 @@ if (myArgs.length == 1){
 
 //set static route to production build of the client app created with vite. This shall be static production build. it wont work
 //with vue app. For vue app processing we need to use vue SSR plugin or nuxt.
-app.use(express.static(path.join(__dirname, '../MinerManager/dist')));
+app.use(express.static(path.join(__dirname, '../MinerManager-UI/dist')));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
@@ -53,8 +53,8 @@ app.get('/messages', (req, res) => {
 }); 
 
 //here you can put your preprocessed vue page
-app.get('/vue-landing-page', (req, res) => {
-  res.sendFile('C:/Private/myprojects/MinerManager/dist/index.html');
+app.get('/landing-page', (req, res) => {
+  res.sendFile('C:/Private/myprojects/MinerManager-UI/dist/index.html');
 }); 
 
 /* router.get('/vue-landing-page',(req, res) => {

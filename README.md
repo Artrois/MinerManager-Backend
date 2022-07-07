@@ -16,8 +16,11 @@ To run WebSoscket server:
 ```sh
 node backend_websocket.js
 ```
-This will open a WS port 8000 and will listen to incoming connections from UI.
+This will open a WS port 8000 and will listen to incoming connections from UI: ws://localhost:8000.
 Change port and server settings in backend_settings.json.
+At the same time Express will serve Vue single page with the route http://localhost:8000/landing-page/
+Copy dist/ folder from MinerManager-UI Vue app relatively to the backend to ../MinerManager-UI/dist. This will be consumed by Express to serve it statically.
+There is also a POST route http://localhost:8000/landing-page/commands, the code to process POSTs not implemented yet but shall in future receive reboot and power off commands from the UI. For now all messages from UI will be processed via same WebSocket.
 
 ## Testing UI and backend
 Use fake_websocket_client.js to emulate UI.
@@ -26,3 +29,5 @@ Use fake_miner.js to emulate a fake WhatsMiner 30S+.
 node fake_miner.js
 ```
 This will start a webserver and will listen on 4028 for GET queries. 4028 is the default port from WhatsMiner. To change the port edit backend_settings.json.
+
+

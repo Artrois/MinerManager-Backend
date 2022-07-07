@@ -27,5 +27,5 @@
     "backend_server_port": 8000,
     "fake_miner_port": 4028,
     "miner_request_interval_msecs": 5000,
-    "debug_level": 1
+    "debug_level": 2
 }

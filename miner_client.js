@@ -36,8 +36,8 @@ exports.connect_to_miner = function(miner_host){
   socket_sum.on('error', (err) => {
     this.miner_host.dirty = true;
     this.miner_host.isAlive = false;
-    if(backend_settings.debug_level)console.log('Socket closed with errors:');
-    if(backend_settings.debug_level)console.log(err);
+    if(backend_settings.debug_level == 1)console.log('Socket closed with errors:');
+    if(backend_settings.debug_level == 1)console.log(err);
   });
   socket_sum.on('data', (data, miner_host) => {
     let recv_string = data.toString();
@@ -51,7 +51,7 @@ exports.connect_to_miner = function(miner_host){
     //return recv_json;
   }); 
   socket_sum.on('end', () => {
-    if(backend_settings.debug_level)console.log('socket_sum disconnected from server');
+    if(backend_settings.debug_level == 2)console.log('socket_sum disconnected from server');
   });
 
   //*****collect pools data
@@ -63,8 +63,8 @@ exports.connect_to_miner = function(miner_host){
   socket_pools.on('error', (err) => {
     this.miner_host.dirty = true;
     this.miner_host.isAlive = false;
-    if(backend_settings.debug_level)console.log('Socket closed with errors:');
-    if(backend_settings.debug_level)console.log(err);
+    if(backend_settings.debug_level == 1)console.log('Socket closed with errors:');
+    if(backend_settings.debug_level == 1)console.log(err);
   });
   socket_pools.on('data', (data, miner_host) => {
     let recv_string = data.toString();
@@ -78,7 +78,7 @@ exports.connect_to_miner = function(miner_host){
   //return recv_json;
   }); 
     socket_pools.on('end', () => {
-      if(backend_settings.debug_level)console.log('socket_pools disconnected from server');
+      if(backend_settings.debug_level == 2)console.log('socket_pools disconnected from server');
   });
 
   //********collect edevs data */
@@ -90,8 +90,8 @@ exports.connect_to_miner = function(miner_host){
   socket_edevs.on('error', (err) => {
     this.miner_host.dirty = true;
     this.miner_host.isAlive = false;
-    if(backend_settings.debug_level)console.log('Socket closed with errors:');
-    if(backend_settings.debug_level)console.log(err);
+    if(backend_settings.debug_level== 1)console.log('Socket closed with errors:');
+    if(backend_settings.debug_level== 1)console.log(err);
   });
   socket_edevs.on('data', (data, miner_host) => {
     let recv_string = data.toString();
@@ -105,7 +105,7 @@ exports.connect_to_miner = function(miner_host){
     //return recv_json;
   }); 
   socket_edevs.on('end', () => {
-    if(backend_settings.debug_level)console.log('socket_edevs disconnected from server');
+    if(backend_settings.debug_level == 2)console.log('socket_edevs disconnected from server');
   });
 
 //********collect psu data */
@@ -117,8 +117,8 @@ const socket_psu = net.connect(miner_host.port, miner_host.HostName, () => {
   socket_psu.on('error', (err) => {
     this.miner_host.dirty = true;
     this.miner_host.isAlive = false;
-    if(backend_settings.debug_level)console.log('Socket closed with errors:');
-    if(backend_settings.debug_level)console.log(err);
+    if(backend_settings.debug_level == 1)console.log('Socket closed with errors:');
+    if(backend_settings.debug_level == 1)console.log(err);
   });
   socket_psu.on('data', (data, miner_host) => {
     let recv_string = data.toString();
@@ -132,7 +132,7 @@ const socket_psu = net.connect(miner_host.port, miner_host.HostName, () => {
   //return recv_json;
   }); 
   socket_psu.on('end', () => {
-    if(backend_settings.debug_level)console.log('socket_psu disconnected from server');
+    if(backend_settings.debug_level == 2)console.log('socket_psu disconnected from server');
   });
 
   //*******collect error codes */
@@ -144,8 +144,8 @@ const socket_psu = net.connect(miner_host.port, miner_host.HostName, () => {
   socket_errors.on('error', (err) => {
     this.miner_host.dirty = true;
     this.miner_host.isAlive = false;
-    if(backend_settings.debug_level)console.log('Socket closed with errors:');
-    if(backend_settings.debug_level)console.log(err);
+    if(backend_settings.debug_level == 1)console.log('Socket closed with errors:');
+    if(backend_settings.debug_level == 1)console.log(err);
   });
   socket_errors.on('data', (data, miner_host) => {
     let recv_string = data.toString();
@@ -159,7 +159,7 @@ const socket_psu = net.connect(miner_host.port, miner_host.HostName, () => {
     //return recv_json;
   }); 
   socket_errors.on('end', () => {
-    if(backend_settings.debug_level)console.log('socket_errors disconnected from server');
+    if(backend_settings.debug_level == 2)console.log('socket_errors disconnected from server');
   });
 }
 
