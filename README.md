@@ -31,6 +31,6 @@ node fake_miner.js
 This will start a webserver and will listen on 4028 for GET queries. 4028 is the default port from WhatsMiner. To change the port edit backend_settings.json.
 
 ## ToDos
-- [] Connection to InnoDB for historic hasrates
-- [] Implement token handling for API commands that require token based encryption as per WhatsMiner API spec.
-- [] Implement reboot, power off commands
+- [ ] Connection to InnoDB for historic hasrates
+- [ ] Implement token handling for API commands that require token based encryption as per WhatsMiner API spec.
+- [ ] Implement reboot, power off commands
